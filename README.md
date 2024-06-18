@@ -1,7 +1,4 @@
 # Restaurant_management_system
-
-
-
 ## Requirement
     
 [get-pip.zip](https://github.com/7Har/Restaurant_management_system/files/6250009/get-pip.zip)
