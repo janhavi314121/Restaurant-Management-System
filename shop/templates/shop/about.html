@@ -1,0 +1,752 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} About Us - Shambhavi{% endblock %}
+
+{% block body %}
+
+  {% load static %}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'shop/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'shop/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'shop/assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+
+  
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'shop/assets/css/style.css' %}" rel="stylesheet">
+
+
+
+  
+
+    <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="{% static 'shop/assets/img/slide/slide-1.jpg' %}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Shambhavi</span></h2>
+                <a href="/shop/" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="{% static 'shop/assets/img/slide/slide-2.jpg' %}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown mb-0">Our Mission</h2>
+                <p class="animate__animated animate__fadeInUp">To be number one</p>
+                <a href="/shop/" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="{% static 'shop/assets/img/slide/slide-3.jpg' % %}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown mb-0">Ambiance and Dining Experience</h2>
+                <p class="animate__animated animate__fadeInUp">Memorable Dining</p>
+                <a href="/shop/" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="{% static 'shop/assets/img/slide/slide-4.jpeg' %}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown mb-0">Specialities and Signature Dishes</h2>
+                <p class="animate__animated animate__fadeInUp">Home Favourites</p>
+                <a href="/shop/" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Slide 5 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="{% static 'shop/assets/img/slide/slide-5.jpeg' %}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown mb-0">Fresh and Local Ingredients</h2>
+                <p class="animate__animated animate__fadeInUp">Farm-to-Table</p>
+                <a href="/shop/" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+         
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon icofont-thin-double-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+   <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Welcome to <strong>Shambhavi</strong></h3>
+            <p class="font-italic">
+              Shambhavi, founded in 1999 in Badlapur, Thane, Mumbai, is a distinguished establishment committed to delivering unparalleled hospitality. Our strategic location at Shop No. 9 Shree Yash Building, Badlapur-421503, near Cottonking Shop, ensures optimal accessibility. Placing patrons at the forefront, we prioritize their needs in every aspect of our operations. For inquiries or assistance, feel free to contact us during our business hours. Choose Shambhavi for an exquisite blend of commitment to excellence and highest standards in hospitality.
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <div class="skills-content">
+              <p><b>Rating: </b></p>
+              <div class="progress">
+                <span class="skill">5 star <i class="val">93%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">4 star <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">3 star <i class="val">30%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">2 star <i class="val">5%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill">1 star <i class="val">0%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-simple-smile"></i>
+              <span data-toggle="counter-up">10,000</span>
+              <p><strong>Happy Customers</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-document-folder"></i>
+              <span data-toggle="counter-up">155</span>
+              <p><strong>Items</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-live-support"></i>
+              <span data-toggle="counter-up">2,871</span>
+              <p><strong>Hours Of Support</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="icofont-users-alt-5"></i>
+              <span data-toggle="counter-up">11</span>
+              <p><strong>Hard Workers</strong></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Team</h2>
+        </div>
+
+        <div class="row" style="padding-left: 379px;">
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="{% static 'shop/assets/img/team/team-5.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4></h4>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="{% static 'shop/assets/img/team/team-7.jpg' %}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4></h4>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <!-- ----FAQ STTART--- -->
+    
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .layout {
+            width: 1000px;
+            margin: auto;
+        }
+
+        .accordion {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: rgba(118, 220, 228, 0.575);
+            border-radius: 10px;
+        }
+
+        .accordion__question p {
+            margin: 5px;
+            padding: 0;
+            font-family: Verdana;
+            font-size: 20px;
+        }
+
+        .accordion__answer p {
+            margin: 5px;
+            padding: 10px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(255, 255, 255);
+            background: rgb(94, 190, 228);
+            border-radius: 10px;
+        }
+
+        .accordion:hover {
+            cursor: pointer;
+        }
+
+        .accordion__answer {
+            display: none;
+        }
+
+        .accordion.active .accordion__answer {
+            display: block;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let answers = document.querySelectorAll(".accordion");
+            answers.forEach((event) => {
+                event.addEventListener("click", () => {
+                    if (event.classList.contains("active")) {
+                        event.classList.remove("active");
+                    } else {
+                        event.classList.add("active");
+                    }
+                });
+            });
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <h2 style="color:rgba(71, 75, 71, 0.884); text-align:center">
+        FAQ
+    </h2>
+    <div class="layout">
+
+
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>Are you kid-friendly?</p>
+            </div>
+            <div class="accordion__answer">
+                <p> Absolutely! We have a kid's menu available, and our staff is always happy to accommodate families with children.</p>
+            </div>
+        </div>
+
+
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>Are your ingredients locally sourced or organic?</p>
+            </div>
+            <div class="accordion__answer">
+                <p>We prioritize sourcing fresh, high-quality ingredients for our dishes. While not all of our ingredients are organic, we strive to support local farmers and suppliers whenever possible.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion__question">
+              <p>Do you cater for events?</p>
+          </div>
+          <div class="accordion__answer">
+              <p> Yes, we offer catering services for events of all sizes. Please contact us through our website's Contact Us section to discuss your event requirements.</p>
+          </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion__question">
+            <p> Is there parking available near the restaurant?</p>
+        </div>
+        <div class="accordion__answer">
+            <p>Unfortunately, we do not have parking facilities directly available near the restaurant. However, there may be street parking or public parking lots available nearby for your convenience.</p>
+        </div>
+    </div>
+
+    
+
+
+    </div>
+</body>
+
+</html>
+
+
+
+    
+
+
+
+    <!-- -----Faq end----- --> 
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pizza Restaurant</title>
+    <style>
+        /* Popup Styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1C2833; /* Desired color */
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            width: 450px; /* Adjusted width */
+        }
+    
+        .popup-content {
+            text-align: center;
+            color: #fff;
+        }
+    
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+        }
+    
+        .popup-image {
+            margin-top: 10px;
+            max-width: 100%;
+            max-height: 150px; /* Adjusted height */
+        }
+    
+        .popup-text {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    
+        .explore-btn {
+            background-color: #fff;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+    </head>
+    <body>
+    
+    <!-- Popup HTML -->
+    <div id="popup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-content">
+            <h2 style="font-weight: bold;">PIZZA IS NEVER ENOUGH</h2>
+            <p class="popup-text">NEW TASTING MENU</p>
+            <img src="http://127.0.0.1:8000/media/shop/images/logo5.jpeg" alt="Pizza" class="popup-image">
+            <p class="popup-text">Craving variety in every slice? Look no further! Our new Pizza Fiesta Menu boasts 18 mouthwatering options. Indulge in the abundance of flavors and elevate your pizza experience!</p>
+            <div class="explore-btn" onclick="location.href='http://127.0.0.1:8000/shop/search/?search=pizza'">EXPLORE NOW!</div>
+        </div>
+    </div>
+    
+    <script>
+        // Function to show popup after 3 seconds
+        function showPopup() {
+            setTimeout(function() {
+                document.getElementById('popup').style.display = 'block';
+            }, 3000); // 3 seconds
+        }
+    
+        // Function to close popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    
+        // Call function to show popup
+        showPopup();
+    </script>
+    
+    </body>
+    </html>
+    
+    
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Footer Design</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .footer {
+      background-color: #24262b;
+      padding: 40px 0; /* Decreased the padding (height) */
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: lightgray;
+      text-decoration: none;
+      font-weight: 300;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: lightgray;
+      padding-left: 8px; /* Add slight padding on hover */
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #24262b;
+      background-color: #ffffff;
+    }
+
+    /* Global styles for footer links */
+    .footer-col ul li a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-col ul li a:hover {
+      color: lightgray;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+  </style>
+  
+
+</head>
+<body>
+  
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="/shop/about">About Us</a></li>
+            <li><a href="/shop">Menus</a></li>
+            <li><a href="/shop/tracker">Tracker</a></li>
+            <li><a href="/shop/orderView/">Your Orders</a></li>
+            <li><a href="/shop/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li style="color: lightgray;"><i class="fas fa-map-marker-alt"></i> Address: Shambahvi,Badlapur(East)-421503</li>
+            <li style="color: lightgray;"><i class="fas fa-phone"></i> Phone: 9028672567</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <ul style="color: transparent;">
+           
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li style="color: lightgray;">Monday 12 pm–11 pm</li>
+            <li style="color: lightgray;">Tuesday 12 pm–11 pm</li>
+            <li style="color: lightgray;">Wednesday 12 pm–11 pm</li>
+            <li style="color: lightgray;">Thursday 12 pm–11 pm</li>
+            <li style="color: lightgray;">Friday 12 pm–11 pm</li>
+            <li style="color: lightgray;">Saturday 12 pm–11 pm</li>
+            <li style="color: lightgray;">Sunday 12 pm–11 pm</li>
+          </ul>
+        </div>
+        
+        
+        <!-- <------Chatbot starts----->  
+          <script type="text/javascript">
+            (function(d, m){
+                var kommunicateSettings = 
+                    {"appId":"1a7b47c0ec2eaa1d6261cc07582bb25cc","popupWidget":true,"automaticChatOpenOnNavigation":true};
+                var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+                s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+                var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+                window.kommunicate = m; m._globals = kommunicateSettings;
+            })(document, window.kommunicate || {});
+        /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+        </script>
+        
+
+      
+<!-- <------Chatbot ends-----> 
+
+  
+      </div>
+      
+    </div>
+    
+  </footer>
+
+
+
+ 
+
+  </body>
+</html>
+
+
+
+
+
+    
+
+
+
+   </main>
+
+{% endblock %}
+
+
+{% block js %}
+<script>
+
+$('#popcart').popover();
+updatePopover(cart);
+
+function updatePopover(cart) {
+    var popStr = "";
+    popStr = popStr + "<h5> Click <a href='/shop/checkout'><button class='btn btn-primary'>Here</button></a> to order </h5><div class='mx-2 my-2'>";
+    document.getElementById("popcart").setAttribute('data-content', popStr);
+    $('#popcart').popover();
+}
+
+</script>
+
+
+{% load static %}
+  <!-- Vendor JS Files -->
+  <script src="{% static 'shop/assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'shop/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'shop/assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'shop/assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'shop/assets/vendor/counterup/counterup.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'shop/assets/js/main.js' %}"></script>
+
+
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends 'shop/basic.html' %}
+{% block title%} Contact Us - Shambhavi{% endblock %}
+{% block css %}
+.footer.container-fluid.bg-dark.text-light {
+    position:fixed;
+    bottom:0;
+}
+.contact2 {
+    font-family: "Montserrat", sans-serif;
+    color: #464646; /* Darker text color */
+    font-weight: 300;
+    background-position: center top;
+}
+
+.contact2 h1,
+.contact2 h2,
+.contact2 h3,
+.contact2 h4,
+.contact2 h5,
+.contact2 h6 {
+    color: #333; /* Darker headings */
+}
+
+.contact2 .font-weight-medium {
+    font-weight: 500;
+}
+
+.contact2 .subtitle {
+    color: #464646; /* Darker subtitle */
+    line-height: 24px;
+}
+
+.contact2 .bg-image {
+    background-size: cover;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.contact2 .card.card-shadow {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact2 .detail-box .round-social {
+    margin-top: 100px;
+}
+
+.contact2 .round-social a {
+    background: transparent;
+    margin: 0 7px;
+    padding: 11px 12px;
+}
+
+.contact2 .contact-container .links a {
+    color: #464646; /* Darker links */
+}
+
+.contact2 .contact-container {
+    position: relative;
+    top: 107px;
+}
+
+.contact2 .btn-danger-gradiant {
+    background: #ff4d7e;
+    background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.contact2 .btn-danger-gradiant:hover {
+    background: #ff6a5b;
+}
+{% endblock %}
+{% block body %}
+<div class="contact2" style="background-image:url(http://127.0.0.1:8000/media/shop/images/map2.jpg);height: 400px;" id="contact">
+  <div class="container">
+    <div class="row contact-container">
+      <div class="col-lg-12">
+        <div class="card card-shadow border-0">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="contact-box p-4">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h4 class="title">Contact Us</h4>
+                  </div>
+                </div>
+                <form action="/shop/contact/" method="POST">{% csrf_token %}
+                  <div class="form-group mt-3">
+                      <b><label for="name">Name:</label></b>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <b><label for="email">Email:</label></b>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                      <b><label for="phone">Phone No:</label></b>
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon">+91</span>
+                          </div>
+                          <input type="tel" class="form-control" id="phone" name="phone" aria-describedby="basic-addon" placeholder="Enter Your Phone Number" required pattern="[0-9]{10}">
+                      </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <b><label for="desc">Message:</label></b>
+                    <textarea class="form-control" id="desc" name="desc" rows="2" required minlength="6" placeholder="How May We Help You ?"></textarea>
+                  </div>
+                    <button type="submit" class="btn btn-danger-gradiant text-white border-0 py-2 px-3"><span> SUBMIT NOW <i class="ti-arrow-right"></i></span></button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-4 bg-image" style="background-image:url(http://127.0.0.1:8000/media/shop/images/contact2.jpeg)">
+                    <div class="detail-box p-4">
+                      <h5 class="text-white font-weight-light mb-3">ADDRESS</h5>
+                      <p class="text-white op-7">Shri Yash CHS,Shop Number 5,Badlapur,Thane,Maharashtra,India-421503 <br> </p>
+                      <h5 class="text-white font-weight-light mb-3 mt-4">CALL US</h5>
+                      <p class="text-white op-7">8149336671
+                        <br> 9028672567</p>
+                      <div class="round-social light">
+                        <a href="https://www.google.com/maps/place/Shambhavi+Snacks+Pav+Bhaji/@19.1661307,73.2348764,17z/data=!3m1!4b1!4m6!3m5!1s0x3be792d33b523437:0x5ce345daacffdab1!8m2!3d19.1661257!4d73.2374513!16s%2Fg%2F1hm5ypdh7?authuser=0&entry=ttu" class="text-decoration-none text-white border border-white rounded-circle" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                        <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" class="text-decoration-none text-white border border-white rounded-circle" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/YOUR_FACEBOOK_PAGE" class="text-decoration-none text-white border border-white rounded-circle" target="_blank"><i class="fab fa-facebook"></i></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <------Chatbot starts----->  
+                    <script type="text/javascript">
+                      (function(d, m){
+                          var kommunicateSettings = 
+                              {"appId":"1a7b47c0ec2eaa1d6261cc07582bb25cc","popupWidget":true,"automaticChatOpenOnNavigation":true};
+                          var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+                          s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+                          var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+                          window.kommunicate = m; m._globals = kommunicateSettings;
+                      })(document, window.kommunicate || {});
+                  /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+                  </script>
+
+                
+<!-- <------Chatbot ends-----> 
+
+
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+
+
+
+
+
+$('#popcart').popover();
+updatePopover(cart);
+
+function updatePopover(cart) {
+    var popStr = "";
+    popStr = popStr + "<h5> Click <a href='/shop/checkout'><button class='btn btn-primary'>Here</button></a> to order </h5><div class='mx-2 my-2'>";
+    document.getElementById("popcart").setAttribute('data-content', popStr);
+    $('#popcart').popover();
+}
+
+{% if thank %}
+alert('Thanks for Contact with us. We will get back to you soon!');
+document.location = "/shop/contact";
+{% endif %}
+
+</script>
+
+
+{% endblock %}

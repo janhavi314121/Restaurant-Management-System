@@ -1,0 +1,306 @@
+{% extends 'shop/basic.html' %}
+{% block title%} Tracker - Shambhavi{% endblock %}
+{% block css %}
+    .footer {
+      position: fixed;
+      bottom: 0;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Animation for Track Order button */
+    #trackOrderBtn {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #trackOrderBtn:hover {
+        transform: scale(1.1);
+    }
+
+    /* New font for specific elements */
+    #trackOrderBtn, #mydiv h2, #items li, #citems li {
+        font-family: 'YourNewFont', sans-serif; /* Replace 'YourNewFont' with the desired font */
+    }
+
+    /* Background color for the entire page */
+    body {
+        background-color: #f2f2f2; /* Light gray background color */
+    }
+
+    /* Styling for form elements */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-control {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    .form-control:focus {
+        border-color: #6cb2eb;
+        box-shadow: 0 0 10px rgba(108, 178, 235, 0.5);
+    }
+
+    .btn-primary {
+        background-color: #6cb2eb;
+        border: 1px solid #6cb2eb;
+        border-radius: 8px;
+        padding: 12px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+
+    .btn-primary:hover {
+        background-color: #4a8cd3;
+        border-color: #4a8cd3;
+    }
+
+    /* Container styling */
+    .container {
+        margin-top: 50px;
+    }
+
+    /* Additional styling for alert */
+    .alert-info {
+        background-color: #e7f0fa;
+        border: 1px solid #6cb2eb;
+        border-radius: 8px;
+        color: #31708f;
+        padding: 20px;
+    }
+
+    /* Additional styling for tracking information */
+    #tracking-info {
+        margin-top: 30px;
+    }
+
+    .progress {
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .progress-bar {
+        border-radius: 8px;
+    }
+
+    .order-status {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    /* Icons */
+    .fa {
+        margin-right: 10px;
+    }
+
+    /* Additional styling for tracking steps */
+    .tracking-step {
+        margin-bottom: 20px;
+    }
+{% endblock %}
+{% block body %}
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="col my-4">
+        <!-- Header with the new font -->
+        <h2 style="font-family: 'YourNewFont', sans-serif;">Enter your Order Id and Email address to track your order</h2>
+        <form method="post" action="#" id="trackerForm">{% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="orderId">Order Id:</label>
+                    <input type="number" class="form-control" id="orderId" name="orderId" placeholder="Enter your Order Id" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pass">Password:</label>
+                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter your Password" required data-toggle="password">
+                </div>
+                <input type="hidden" name="name" id="name" value="{{ request.user }}">
+                <!-- Track Order button with the new font -->
+                <button type="submit" class="btn btn-primary" id="trackOrderBtn">Track Order</button>
+            </div>
+        </form>
+    </div>
+    <div class="col my-4" id="mydiv">
+        <!-- Tracking information -->
+        <div id="tracking-info">
+            <div class="order-status">
+                <i class="fas fa-info-circle"></i> Order Status: <span id="orderStatus">  </span>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Step 1</div>
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Step 2</div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Step 3</div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Step 4</div>
+            </div>
+            <!-- Additional tracking information -->
+            <div class="tracking-step">
+                <i class="fas fa-check-circle text-success"></i> Step 1: Order Placed
+            </div>
+            <div class="tracking-step">
+                <i class="fas fa-clock text-warning"></i> Step 2: Processing
+            </div>
+            <div class="tracking-step">
+                <i class="fas fa-shipping-fast text-info"></i> Step 3: Shipped
+            </div>
+            <div class="tracking-step">
+                <i class="fas fa-box-open text-primary"></i> Step 4: Delivered
+            </div>
+        </div>
+    </div>
+    <!-- <------Chatbot starts----->  
+        <script type="text/javascript">
+            (function(d, m){
+                var kommunicateSettings = 
+                    {"appId":"1a7b47c0ec2eaa1d6261cc07582bb25cc","popupWidget":true,"automaticChatOpenOnNavigation":true};
+                var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+                s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+                var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+                window.kommunicate = m; m._globals = kommunicateSettings;
+            })(document, window.kommunicate || {});
+        /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+        </script>
+
+      
+<!-- <------Chatbot ends-----> 
+</div>
+{% else %}
+<div id="cont2">
+    <div class="alert alert-info">
+        <!-- Alert text with the new font -->
+        <font style="font-size:22px; font-family: 'YourNewFont', sans-serif;"><center>Before Track Your Order you need to <strong><a class="alert-link" data-toggle="modal" data-target="#loginModal">Login</a></strong></center></font>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+{% block js %}
+<script>
+
+$('#popcart').popover();
+updatePopover(cart);
+
+function updatePopover(cart) {
+    var popStr = "";
+    popStr = popStr + "<h5> Click <a href='/shop/checkout'><button class='btn btn-primary'>Here</button></a> to order </h5><div class='mx-2 my-2'>";
+    document.getElementById("popcart").setAttribute('data-content', popStr);
+    $('#popcart').popover();
+}
+
+$('#trackerForm').submit(function(event) {
+    // Clear previous tracking information
+    $('#mydiv').empty();
+
+    var formData = {
+        'orderId': $('input[name=orderId]').val(),
+        'email': $('input[name=email]').val(),
+        'password': $('input[name=pass]').val(),
+        'name': $('input[name=name]').val(),
+        'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+    };
+
+    $.ajax({
+        type: 'POST',
+        url: '/shop/tracker/',
+        data: formData,
+        encode: true
+    })
+
+    .done(function(data) {
+        $('#mydiv').empty();
+        data = JSON.parse(data);
+
+        // Display order status
+        $('#orderStatus').text(data['orderStatus']);
+
+        mydiv = `<div class="my-4">
+                    <!-- Result header with the new font -->
+                    <h2 style="font-family: 'YourNewFont', sans-serif;">Your Order Status</h2>
+                    <ul class="list-group" id="items">
+                    </ul>
+                </div>`;
+        $('#mydiv').append(mydiv);
+
+        if (data['status'] == "success") {
+            updates = data['updates'];
+
+            mydiv = `<div class="my-4">
+                        <!-- Order details header with the new font -->
+                        <h2 style="font-family: 'YourNewFont', sans-serif;">Your Order Details</h2>
+                        <ul class="list-group" id="citems">
+                        </ul>
+                    </div>`;
+            $('#mydiv').append(mydiv);
+
+            for (i = 0; i < updates.length; i++) {
+                let text = updates[i]['text'];
+                let time = updates[i]['time'];
+                var s = new Date(time).toLocaleString(undefined, {timeZone: 'Asia/Kolkata'}); 
+                mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">${text}<span class="badge badge-primary badge-pill">${s}</span></li>`
+                $('#items').append(mystr);
+            }
+
+            cart = JSON.parse(data['itemsJson']);
+
+            for (item in cart) {
+                let name = cart[item][1];
+                let qty = cart[item][0];
+                mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">
+                         ${name}
+                         <span class="badge badge-primary badge-pill">${qty}</span>
+                         </li>`
+                $('#citems').append(mystr);
+            }
+        }
+        else if (data['status'] == "Invalid") {
+            alert("your Password is Wrong!!");
+            mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">Your Password is Wrong</li>`
+            $('#items').append(mystr);
+        }
+        else {
+            mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">Sorry, We are not able to fetch this order id and email. Make sure to type correct order Id and email</li>`
+            $('#items').append(mystr);
+        }
+
+        // Additional tracking information
+        let trackingInfo = `
+            <div class="tracking-step">
+                <i class="fas fa-check-circle text-success"></i> Step 1: Order Placed
+            </div>
+            <div class="tracking-step">
+                <i class="fas fa-clock text-warning"></i> Step 2: Processing
+            </div>
+            <div class="tracking-step">
+                <i class="fas fa-shipping-fast text-info"></i> Step 3: Shipped
+            </div>
+            <div class="tracking-step">
+                <i class="fas fa-box-open text-primary"></i> Step 4: Delivered
+            </div>
+        `;
+        $('#mydiv').append(trackingInfo);
+    });
+    event.preventDefault();
+});
+
+</script>
+{% endblock %}
+
+
